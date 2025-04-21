@@ -1,9 +1,122 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Hello World</title>
-    </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Haunted Places Insights</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px;
+      background-image: url('data/haunted-house.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ff6666;
+      margin: 20px 0 10px 0;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .button-group {
+      margin: 30px 0;
+    }
+
+    .tab-button {
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 2px solid #ff6666;
+      color: #ff6666;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      margin: 5px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .tab-button:hover {
+      background-color: #ff6666;
+      color: #0d0d0d;
+    }
+
+    .visual-container {
+      margin-top: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      max-width: 95vw;
+    }
+
+    .description-box {
+      max-width: 900px;
+      margin: 0 auto 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1rem;
+      line-height: 1.5;
+      box-shadow: 0 0 10px #000;
+    }
+
+    iframe {
+      width: 90vw;
+      height: 700px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Haunted Places Insights</h1>
+
+  <div class="button-group">
+    <button class="tab-button" onclick="showVisualization(1)">Button 1</button>
+    <button class="tab-button" onclick="showVisualization(2)">Button 2</button>
+    <button class="tab-button" onclick="showVisualization(3)">Button 3</button>
+    <button class="tab-button" onclick="showVisualization(4)">Button 4</button>
+    <button class="tab-button" onclick="showVisualization(5)">Button 5</button>
+  </div>
+
+  <div class="visual-container">
+    <div class="description-box" id="description">
+      <!-- Sample description will be replaced dynamically -->
+      Click a button above to explore eerie data visualizations of haunted locations.
+    </div>
+    <iframe id="visualFrame" src=""></iframe>
+  </div>
+
+  <script>
+    const descriptions = {
+      1: "This visualization maps ghost sightings across the US, revealing supernatural activity hotspots.",
+      2: "Explore chilling frequency data of haunted encounters in urban vs rural areas.",
+      3: "See how haunted locations cluster geographically using real report data.",
+      4: "Compare paranormal reports across decades to identify rising haunted trends.",
+      5: "Dive into analysis of haunting types, from poltergeists to apparitions."
+    };
+
+    const sources = {
+      1: "Visualization/vis1.html",
+      2: "Visualization/vis2.html",
+      3: "Visualization/vis3.html",
+      4: "Visualization/vis1.html", // placeholder
+      5: "Visualization/vis2.html"  // placeholder
+    };
+
+    function showVisualization(index) {
+      document.getElementById("description").textContent = descriptions[index] || "Description coming soon...";
+      document.getElementById("visualFrame").src = sources[index] || "";
+    }
+  </script>
+</body>
 </html>
