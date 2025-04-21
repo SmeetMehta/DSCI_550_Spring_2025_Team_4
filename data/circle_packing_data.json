@@ -1,0 +1,855 @@
+{
+  "name": "US Events",
+  "children": [
+    {
+      "name": "AK",
+      "children": [
+        {
+          "name": "Death",
+          "value": 6
+        },
+        {
+          "name": "Murder",
+          "value": 6
+        },
+        {
+          "name": "Supernatural",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "name": "AL",
+      "children": [
+        {
+          "name": "Death",
+          "value": 30
+        },
+        {
+          "name": "Murder",
+          "value": 40
+        },
+        {
+          "name": "Supernatural",
+          "value": 55
+        }
+      ]
+    },
+    {
+      "name": "AR",
+      "children": [
+        {
+          "name": "Death",
+          "value": 21
+        },
+        {
+          "name": "Murder",
+          "value": 11
+        },
+        {
+          "name": "Supernatural",
+          "value": 29
+        }
+      ]
+    },
+    {
+      "name": "AZ",
+      "children": [
+        {
+          "name": "Death",
+          "value": 30
+        },
+        {
+          "name": "Murder",
+          "value": 29
+        },
+        {
+          "name": "Supernatural",
+          "value": 46
+        }
+      ]
+    },
+    {
+      "name": "CA",
+      "children": [
+        {
+          "name": "Death",
+          "value": 164
+        },
+        {
+          "name": "Murder",
+          "value": 170
+        },
+        {
+          "name": "Supernatural",
+          "value": 309
+        }
+      ]
+    },
+    {
+      "name": "CO",
+      "children": [
+        {
+          "name": "Death",
+          "value": 34
+        },
+        {
+          "name": "Murder",
+          "value": 34
+        },
+        {
+          "name": "Supernatural",
+          "value": 42
+        }
+      ]
+    },
+    {
+      "name": "CT",
+      "children": [
+        {
+          "name": "Death",
+          "value": 32
+        },
+        {
+          "name": "Murder",
+          "value": 22
+        },
+        {
+          "name": "Supernatural",
+          "value": 52
+        }
+      ]
+    },
+    {
+      "name": "DE",
+      "children": [
+        {
+          "name": "Death",
+          "value": 4
+        },
+        {
+          "name": "Murder",
+          "value": 3
+        },
+        {
+          "name": "Supernatural",
+          "value": 12
+        }
+      ]
+    },
+    {
+      "name": "FL",
+      "children": [
+        {
+          "name": "Death",
+          "value": 51
+        },
+        {
+          "name": "Murder",
+          "value": 47
+        },
+        {
+          "name": "Supernatural",
+          "value": 87
+        }
+      ]
+    },
+    {
+      "name": "GA",
+      "children": [
+        {
+          "name": "Death",
+          "value": 47
+        },
+        {
+          "name": "Murder",
+          "value": 43
+        },
+        {
+          "name": "Supernatural",
+          "value": 74
+        }
+      ]
+    },
+    {
+      "name": "HI",
+      "children": [
+        {
+          "name": "Death",
+          "value": 14
+        },
+        {
+          "name": "Murder",
+          "value": 6
+        },
+        {
+          "name": "Supernatural",
+          "value": 27
+        }
+      ]
+    },
+    {
+      "name": "IA",
+      "children": [
+        {
+          "name": "Death",
+          "value": 34
+        },
+        {
+          "name": "Murder",
+          "value": 13
+        },
+        {
+          "name": "Supernatural",
+          "value": 33
+        }
+      ]
+    },
+    {
+      "name": "ID",
+      "children": [
+        {
+          "name": "Death",
+          "value": 9
+        },
+        {
+          "name": "Murder",
+          "value": 10
+        },
+        {
+          "name": "Supernatural",
+          "value": 18
+        }
+      ]
+    },
+    {
+      "name": "IL",
+      "children": [
+        {
+          "name": "Death",
+          "value": 87
+        },
+        {
+          "name": "Murder",
+          "value": 64
+        },
+        {
+          "name": "Supernatural",
+          "value": 97
+        }
+      ]
+    },
+    {
+      "name": "IN",
+      "children": [
+        {
+          "name": "Death",
+          "value": 55
+        },
+        {
+          "name": "Murder",
+          "value": 61
+        },
+        {
+          "name": "Supernatural",
+          "value": 68
+        }
+      ]
+    },
+    {
+      "name": "KS",
+      "children": [
+        {
+          "name": "Death",
+          "value": 31
+        },
+        {
+          "name": "Murder",
+          "value": 21
+        },
+        {
+          "name": "Supernatural",
+          "value": 28
+        }
+      ]
+    },
+    {
+      "name": "KY",
+      "children": [
+        {
+          "name": "Death",
+          "value": 67
+        },
+        {
+          "name": "Murder",
+          "value": 64
+        },
+        {
+          "name": "Supernatural",
+          "value": 72
+        }
+      ]
+    },
+    {
+      "name": "LA",
+      "children": [
+        {
+          "name": "Death",
+          "value": 13
+        },
+        {
+          "name": "Murder",
+          "value": 20
+        },
+        {
+          "name": "Supernatural",
+          "value": 34
+        }
+      ]
+    },
+    {
+      "name": "MA",
+      "children": [
+        {
+          "name": "Death",
+          "value": 60
+        },
+        {
+          "name": "Murder",
+          "value": 35
+        },
+        {
+          "name": "Supernatural",
+          "value": 108
+        }
+      ]
+    },
+    {
+      "name": "MD",
+      "children": [
+        {
+          "name": "Death",
+          "value": 19
+        },
+        {
+          "name": "Murder",
+          "value": 19
+        },
+        {
+          "name": "Supernatural",
+          "value": 44
+        }
+      ]
+    },
+    {
+      "name": "ME",
+      "children": [
+        {
+          "name": "Death",
+          "value": 10
+        },
+        {
+          "name": "Murder",
+          "value": 4
+        },
+        {
+          "name": "Supernatural",
+          "value": 22
+        }
+      ]
+    },
+    {
+      "name": "MI",
+      "children": [
+        {
+          "name": "Death",
+          "value": 88
+        },
+        {
+          "name": "Murder",
+          "value": 93
+        },
+        {
+          "name": "Supernatural",
+          "value": 118
+        }
+      ]
+    },
+    {
+      "name": "MN",
+      "children": [
+        {
+          "name": "Death",
+          "value": 33
+        },
+        {
+          "name": "Murder",
+          "value": 30
+        },
+        {
+          "name": "Supernatural",
+          "value": 41
+        }
+      ]
+    },
+    {
+      "name": "MO",
+      "children": [
+        {
+          "name": "Death",
+          "value": 41
+        },
+        {
+          "name": "Murder",
+          "value": 46
+        },
+        {
+          "name": "Supernatural",
+          "value": 104
+        }
+      ]
+    },
+    {
+      "name": "MS",
+      "children": [
+        {
+          "name": "Death",
+          "value": 8
+        },
+        {
+          "name": "Murder",
+          "value": 7
+        },
+        {
+          "name": "Supernatural",
+          "value": 19
+        }
+      ]
+    },
+    {
+      "name": "MT",
+      "children": [
+        {
+          "name": "Death",
+          "value": 10
+        },
+        {
+          "name": "Murder",
+          "value": 1
+        },
+        {
+          "name": "Supernatural",
+          "value": 14
+        }
+      ]
+    },
+    {
+      "name": "NC",
+      "children": [
+        {
+          "name": "Death",
+          "value": 51
+        },
+        {
+          "name": "Murder",
+          "value": 38
+        },
+        {
+          "name": "Supernatural",
+          "value": 40
+        }
+      ]
+    },
+    {
+      "name": "ND",
+      "children": [
+        {
+          "name": "Death",
+          "value": 9
+        },
+        {
+          "name": "Murder",
+          "value": 9
+        },
+        {
+          "name": "Supernatural",
+          "value": 16
+        }
+      ]
+    },
+    {
+      "name": "NE",
+      "children": [
+        {
+          "name": "Death",
+          "value": 26
+        },
+        {
+          "name": "Murder",
+          "value": 9
+        },
+        {
+          "name": "Supernatural",
+          "value": 39
+        }
+      ]
+    },
+    {
+      "name": "NH",
+      "children": [
+        {
+          "name": "Death",
+          "value": 10
+        },
+        {
+          "name": "Murder",
+          "value": 6
+        },
+        {
+          "name": "Supernatural",
+          "value": 21
+        }
+      ]
+    },
+    {
+      "name": "NJ",
+      "children": [
+        {
+          "name": "Death",
+          "value": 21
+        },
+        {
+          "name": "Murder",
+          "value": 15
+        },
+        {
+          "name": "Supernatural",
+          "value": 69
+        }
+      ]
+    },
+    {
+      "name": "NM",
+      "children": [
+        {
+          "name": "Death",
+          "value": 10
+        },
+        {
+          "name": "Murder",
+          "value": 14
+        },
+        {
+          "name": "Supernatural",
+          "value": 24
+        }
+      ]
+    },
+    {
+      "name": "NV",
+      "children": [
+        {
+          "name": "Death",
+          "value": 6
+        },
+        {
+          "name": "Murder",
+          "value": 12
+        },
+        {
+          "name": "Supernatural",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "name": "NY",
+      "children": [
+        {
+          "name": "Death",
+          "value": 68
+        },
+        {
+          "name": "Murder",
+          "value": 83
+        },
+        {
+          "name": "Supernatural",
+          "value": 136
+        }
+      ]
+    },
+    {
+      "name": "OH",
+      "children": [
+        {
+          "name": "Death",
+          "value": 83
+        },
+        {
+          "name": "Murder",
+          "value": 80
+        },
+        {
+          "name": "Supernatural",
+          "value": 125
+        }
+      ]
+    },
+    {
+      "name": "OK",
+      "children": [
+        {
+          "name": "Death",
+          "value": 37
+        },
+        {
+          "name": "Murder",
+          "value": 35
+        },
+        {
+          "name": "Supernatural",
+          "value": 36
+        }
+      ]
+    },
+    {
+      "name": "OR",
+      "children": [
+        {
+          "name": "Death",
+          "value": 22
+        },
+        {
+          "name": "Murder",
+          "value": 24
+        },
+        {
+          "name": "Supernatural",
+          "value": 54
+        }
+      ]
+    },
+    {
+      "name": "PA",
+      "children": [
+        {
+          "name": "Death",
+          "value": 95
+        },
+        {
+          "name": "Murder",
+          "value": 115
+        },
+        {
+          "name": "Supernatural",
+          "value": 188
+        }
+      ]
+    },
+    {
+      "name": "RI",
+      "children": [
+        {
+          "name": "Death",
+          "value": 9
+        },
+        {
+          "name": "Murder",
+          "value": 9
+        },
+        {
+          "name": "Supernatural",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "name": "SC",
+      "children": [
+        {
+          "name": "Death",
+          "value": 38
+        },
+        {
+          "name": "Murder",
+          "value": 26
+        },
+        {
+          "name": "Supernatural",
+          "value": 43
+        }
+      ]
+    },
+    {
+      "name": "SD",
+      "children": [
+        {
+          "name": "Death",
+          "value": 16
+        },
+        {
+          "name": "Murder",
+          "value": 8
+        },
+        {
+          "name": "Supernatural",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "name": "TN",
+      "children": [
+        {
+          "name": "Death",
+          "value": 26
+        },
+        {
+          "name": "Murder",
+          "value": 50
+        },
+        {
+          "name": "Supernatural",
+          "value": 57
+        }
+      ]
+    },
+    {
+      "name": "TX",
+      "children": [
+        {
+          "name": "Death",
+          "value": 129
+        },
+        {
+          "name": "Murder",
+          "value": 132
+        },
+        {
+          "name": "Supernatural",
+          "value": 177
+        }
+      ]
+    },
+    {
+      "name": "UT",
+      "children": [
+        {
+          "name": "Death",
+          "value": 25
+        },
+        {
+          "name": "Murder",
+          "value": 17
+        },
+        {
+          "name": "Supernatural",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "name": "VA",
+      "children": [
+        {
+          "name": "Death",
+          "value": 31
+        },
+        {
+          "name": "Murder",
+          "value": 25
+        },
+        {
+          "name": "Supernatural",
+          "value": 59
+        }
+      ]
+    },
+    {
+      "name": "VT",
+      "children": [
+        {
+          "name": "Death",
+          "value": 15
+        },
+        {
+          "name": "Murder",
+          "value": 6
+        },
+        {
+          "name": "Supernatural",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "WA",
+      "children": [
+        {
+          "name": "Death",
+          "value": 37
+        },
+        {
+          "name": "Murder",
+          "value": 30
+        },
+        {
+          "name": "Supernatural",
+          "value": 58
+        }
+      ]
+    },
+    {
+      "name": "WI",
+      "children": [
+        {
+          "name": "Death",
+          "value": 33
+        },
+        {
+          "name": "Murder",
+          "value": 43
+        },
+        {
+          "name": "Supernatural",
+          "value": 65
+        }
+      ]
+    },
+    {
+      "name": "WV",
+      "children": [
+        {
+          "name": "Death",
+          "value": 14
+        },
+        {
+          "name": "Murder",
+          "value": 13
+        },
+        {
+          "name": "Supernatural",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "name": "WY",
+      "children": [
+        {
+          "name": "Death",
+          "value": 13
+        },
+        {
+          "name": "Murder",
+          "value": 9
+        },
+        {
+          "name": "Supernatural",
+          "value": 20
+        }
+      ]
+    }
+  ]
+}
