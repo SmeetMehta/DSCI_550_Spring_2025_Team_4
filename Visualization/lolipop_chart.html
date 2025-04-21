@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animated Lollipop Chart - Dark Theme</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+    }
+
+    svg {
+      background-color: black;
+    }
+
+    .lollipop-line {
+      stroke: #666;
+      stroke-width: 2px;
+    }
+
+    .label-inside {
+      font-size: 11px;
+      font-weight: normal;
+      fill: white;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .axis text,
+    .axis path,
+    .axis line {
+      stroke: white;
+      fill: white;
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    .legend-label {
+      font-size: 13px;
+      font-weight: normal;
+      fill: white;
+    }
+
+    .tooltip {
+      position: absolute;
+      text-align: left;
+      width: 250px;
+      padding: 10px;
+      font: 12px sans-serif;
+      background: #222;
+      color: #fff;
+      border-radius: 5px;
+      pointer-events: none;
+      opacity: 0;
+      border: 1px solid #555;
+    }
+  </style>
+</head>
+<body>
+  <svg width="1400" height="700"></svg>
+
+  <script>
+    const tooltip = d3.select("body")
+      .append("div")
+      .attr("class", "tooltip");
+
+    d3.json("witness.json").then(data => {
+      const svg = d3.select("svg"),
+            width = +svg.attr("width"),
+            height = +svg.attr("height"),
+            margin = { top: 60, right: 120, bottom: 100, left: 80 };
+
+      const maxEyewitnesses = d3.max(data, d => d["Estimated Eyewitnesses"]);
+
+      const colorScale = d3.scaleLinear()
+        .domain([
+          0,
+          maxEyewitnesses * 0.2,
+          maxEyewitnesses * 0.4,
+          maxEyewitnesses * 0.6,
+          maxEyewitnesses * 0.8,
+          maxEyewitnesses
+        ])
+        .range(["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#0000ff", "#8b00ff"]);
+
+      const x = d3.scaleBand()
+                  .domain(data.map(d => d.state))
+                  .rangeRound([margin.left, width - margin.right])
+                  .padding(0.6);
+
+      const y = d3.scaleLinear()
+                  .domain([0, maxEyewitnesses * 1.1])
+                  .nice()
+                  .range([height - margin.bottom, margin.top]);
+
+      // X-axis
+      svg.append("g")
+         .attr("class", "axis")
+         .attr("transform", `translate(0,${height - margin.bottom})`)
+         .call(d3.axisBottom(x))
+         .selectAll("text")
+         .attr("transform", "rotate(-30)")
+         .style("text-anchor", "end");
+
+      // Y-axis
+      svg.append("g")
+         .attr("class", "axis")
+         .attr("transform", `translate(${margin.left},0)`)
+         .call(d3.axisLeft(y));
+
+      // Lollipop stems (animated)
+      svg.selectAll(".lollipop-line")
+         .data(data)
+         .enter()
+         .append("line")
+         .attr("class", "lollipop-line")
+         .attr("x1", d => x(d.state) + x.bandwidth() / 2)
+         .attr("x2", d => x(d.state) + x.bandwidth() / 2)
+         .attr("y1", y(0))
+         .attr("y2", y(0))
+         .transition()
+         .duration(1000)
+         .delay((d, i) => i * 80)
+         .attr("y2", d => y(d["Estimated Eyewitnesses"]));
+
+      // Lollipop bubbles (animated grow)
+      svg.selectAll(".lollipop-circle")
+         .data(data)
+         .enter()
+         .append("circle")
+         .attr("class", "lollipop-circle")
+         .attr("cx", d => x(d.state) + x.bandwidth() / 2)
+         .attr("cy", d => y(d["Estimated Eyewitnesses"]))
+         .attr("r", 0)
+         .attr("fill", d => colorScale(d["Estimated Eyewitnesses"]))
+         .on("mouseover", function(event, d) {
+            tooltip.transition().duration(200).style("opacity", 0.95);
+            tooltip.html(`<strong>${d.state}</strong><br>${d.Caption}`)
+                   .style("left", (event.pageX + 15) + "px")
+                   .style("top", (event.pageY - 28) + "px");
+         })
+         .on("mouseout", function() {
+            tooltip.transition().duration(300).style("opacity", 0);
+         })
+         .transition()
+         .duration(1000)
+         .delay((d, i) => i * 80)
+         .attr("r", 16);
+
+      // Labels (fade-in)
+      svg.selectAll(".label-inside")
+         .data(data)
+         .enter()
+         .append("text")
+         .attr("class", "label-inside")
+         .attr("x", d => x(d.state) + x.bandwidth() / 2)
+         .attr("y", d => y(d["Estimated Eyewitnesses"]))
+         .text(d => d["Estimated Eyewitnesses"])
+         .transition()
+         .duration(1000)
+         .delay((d, i) => i * 80 + 300)
+         .style("opacity", 1);
+
+      // Gradient Legend
+      const defs = svg.append("defs");
+      const gradient = defs.append("linearGradient")
+                           .attr("id", "multiColorGradient")
+                           .attr("x1", "0%")
+                           .attr("x2", "100%");
+
+      const legendColors = colorScale.range();
+      legendColors.forEach((color, i) => {
+        gradient.append("stop")
+          .attr("offset", `${(i / (legendColors.length - 1)) * 100}%`)
+          .attr("stop-color", color);
+      });
+
+      const legendWidth = 320;
+      const legendHeight = 15;
+      const legendX = width - margin.right - legendWidth;
+      const legendY = margin.top - 40;
+
+      svg.append("rect")
+         .attr("x", legendX)
+         .attr("y", legendY)
+         .attr("width", legendWidth)
+         .attr("height", legendHeight)
+         .style("fill", "url(#multiColorGradient)")
+         .style("stroke", "#aaa");
+
+      const legendScale = d3.scaleLinear()
+                            .domain([0, maxEyewitnesses])
+                            .range([0, legendWidth]);
+
+      const legendAxis = d3.axisBottom(legendScale)
+                           .ticks(6)
+                           .tickFormat(d3.format("d"));
+
+      svg.append("g")
+         .attr("class", "axis")
+         .attr("transform", `translate(${legendX},${legendY + legendHeight})`)
+         .call(legendAxis);
+
+      svg.append("text")
+         .attr("x", legendX)
+         .attr("y", legendY - 8)
+         .attr("class", "legend-label")
+         .text("Estimated Eyewitnesses");
+    });
+  </script>
+</body>
+</html>
