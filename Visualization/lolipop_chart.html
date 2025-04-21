@@ -68,7 +68,7 @@
       .append("div")
       .attr("class", "tooltip");
 
-    d3.json("witness.json").then(data => {
+    d3.json("../data/witness.json").then(data => {
       const svg = d3.select("svg"),
             width = +svg.attr("width"),
             height = +svg.attr("height"),
