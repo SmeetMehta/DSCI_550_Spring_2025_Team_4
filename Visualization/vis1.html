@@ -75,8 +75,8 @@
     }));
 
   Promise.all([ 
-    d3.json("us-states.json"),
-    d3.json("sightings.json")
+    d3.json("../data/us-states.json"),
+    d3.json("../data/sightings.json")
   ]).then(([usStates, data]) => {
     // Draw state fills with white color
     g.append("g")
