@@ -52,6 +52,7 @@
       color: #FF2400;
       padding: 10px 20px;
       font-size: 1rem;
+      font-family: 'Rockwell', serif;
       border-radius: 10px;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -67,22 +68,25 @@
 
     .visual-container {
       margin-top: 20px;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.5); 
       padding: 20px;
       border-radius: 10px;
       display: inline-block;
       max-width: 95vw;
-    }
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  }
 
     .description-box {
       max-width: 900px;
       margin: 0 auto 20px;
+      background-color: #f0f0f0;
       background-color: rgba(0, 0, 0, 0.6);
       padding: 15px;
       border-radius: 10px;
       font-size: 1rem;
       line-height: 1.5;
-      box-shadow: 0 0 10px #000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: #333;
     }
 
     iframe {
@@ -120,10 +124,10 @@
 
   <script>
     const descriptions = {
-      1: "This visualization maps ghost sightings across the US, revealing supernatural activity hotspots.",
-      2: "Explore chilling frequency data of haunted encounters in urban vs rural areas.",
-      3: "See how haunted locations cluster geographically using real report data.",
-      4: "Compare paranormal reports across decades to identify rising haunted trends.",
+      1: "This visualization presents a map of the United States with interactive bubbles placed over cities, each representing the number of reported ghost sightings in that location.Users can explore the map by interacting with the bubbles, which display detailed data on the number of ghost sightings for each city. The visualization allows for an easy comparison of activity levels between different locations, providing insights into areas with the highest concentrations of reported incidents. The legend helps in interpreting the size and color variations, ensuring that users can accurately assess the data.",
+      2: "This visualization illustrates the distribution of different event types (such as deaths, supernatural occurrences, and murders) across U.S. states. It highlights the relative frequency of these events, with the size of each bubble representing the count. By viewing the bubbles at both the state and national level, users can easily identify patterns in the occurrence of specific event types, helping to reveal which states have the highest or lowest reports for each event category. The user can hover over to get insights",
+      3: "This visualisation displays the number of eyewitnesses across each state in the U.S. The chart allows users to compare eyewitness counts between states, with the tallest bars representing the states with the highest number of witnesses. Upon hovering over a state, users can view detailed descriptions of the incident with the highest number of eyewitnesses in that state, offering deeper insights into the most significant occurrences",
+      4: "This word cloud visualization highlights the most frequently mentioned words in eyewitness testimonies. The size of each word corresponds to its frequency, allowing users to quickly identify the most common terms associated with paranormal events. By visualizing these keywords, users can gain insights into recurring themes and patterns in the testimonies, providing a clear overview of the language and topics most prevalent in reports.",
       5: "Dive into analysis of haunting types, from poltergeists to apparitions."
     };
 
