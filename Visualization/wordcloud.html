@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Word Cloud</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://unpkg.com/d3-cloud/build/d3.layout.cloud.js"></script>
+</head>
+<body>
+  <h2>Word Cloud from Description</h2>
+  <svg width="800" height="600"></svg>
+
+  <script>
+    // Load existing word frequency data
+    d3.json("wordcloud_data.json").then(function(data) {
+      // word cloud layout
+      const layout = d3.layout.cloud()
+        .size([800, 600])
+        .words(data)  // Use existing word frequency data directly
+        .padding(5)
+        .rotate(() => ~~(Math.random() * 2) * 90)
+        .fontSize(d => d.size/100)  // Use the size attribute to set the font size
+        .on("end", draw);
+
+      layout.start();
+
+      // Mapping word clouds
+      function draw(words) {
+        d3.select("svg")
+          .append("g")
+          .attr("transform", "translate(400,300)")
+          .selectAll("text")
+          .data(words)
+          .enter().append("text")
+          .style("font-size", d => d.size + "px")
+          .style("fill", (d, i) => d3.schemeCategory10[i % 10])  // Use different colors
+          .attr("text-anchor", "middle")
+          .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
+          .text(d => d.text);
+      }
+    });
+  </script>
+</body>
+</html>
