@@ -61,7 +61,7 @@
     <div><span style="background:#8e44ad"></span> Supernatural</div>
   </div>
   <div class="tooltip" id="tooltip"></div>
-  <svg width="1000" height="1000"></svg>
+  <svg width="1700" height="1000"></svg>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script>
@@ -90,7 +90,7 @@
         .sort((a, b) => b.value - a.value);
 
       const pack = d3.pack()
-        .size([width, height])
+        .size([width-100, height-100])
         .padding(5);
 
       const rootPacked = pack(root);
