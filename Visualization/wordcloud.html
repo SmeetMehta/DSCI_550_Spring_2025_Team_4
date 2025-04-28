@@ -9,9 +9,24 @@
 <body>
   <h2>Word Cloud from Description</h2>
   <svg width="1000" height="600"></svg>
-  <style>
+ <style>
+    body {
+      background-color: #f0f0f0; /* soft grey background for the whole page */
+      margin: 0;
+      padding: 20px;
+    }
+  
     h2 {
-      color: white;
+      color: rgb(5, 245, 25);
+      text-align: center;
+    }
+  
+    svg {
+      background-color: #e0e0e0; /* soft grey background for the word cloud area */
+      display: block;
+      margin: 20px auto; /* center the svg */
+      border-radius: 15px; /* optional: soft rounded corners */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* optional: slight shadow to pop out */
     }
   </style>
 
