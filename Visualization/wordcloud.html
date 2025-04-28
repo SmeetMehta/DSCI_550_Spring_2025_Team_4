@@ -8,7 +8,12 @@
 </head>
 <body>
   <h2>Word Cloud from Description</h2>
-  <svg width="800" height="600"></svg>
+  <svg width="1000" height="600"></svg>
+  <style>
+    h2 {
+      color: white;
+    }
+  </style>
 
   <script>
     // Load existing word frequency data
@@ -28,12 +33,12 @@
       function draw(words) {
         d3.select("svg")
           .append("g")
-          .attr("transform", "translate(400,300)")
+          .attr("transform", "translate(600,300)")
           .selectAll("text")
           .data(words)
           .enter().append("text")
           .style("font-size", d => d.size + "px")
-          .style("fill", (d, i) => d3.schemeCategory10[i % 10])  // Use different colors
+          .style("fill", (d, i) => d3.schemeCategory10[i % 9])  // Use different colors
           .attr("text-anchor", "middle")
           .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
           .text(d => d.text);
