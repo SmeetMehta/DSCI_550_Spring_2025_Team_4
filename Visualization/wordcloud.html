@@ -12,7 +12,7 @@
 
   <script>
     // Load existing word frequency data
-    d3.json("wordcloud_data.json").then(function(data) {
+    d3.json("../data/wordcloud_data.json").then(function(data) {
       // word cloud layout
       const layout = d3.layout.cloud()
         .size([800, 600])
