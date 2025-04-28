@@ -9,13 +9,7 @@
 <body>
   <h2>Word Cloud from Description</h2>
   <svg width="1000" height="600"></svg>
- <style>
-    body {
-      background-color: #f0f0f0; /* soft grey background for the whole page */
-      margin: 0;
-      padding: 20px;
-    }
-  
+ <style>  
     h2 {
       color: rgb(5, 245, 25);
       text-align: center;
@@ -48,7 +42,7 @@
       function draw(words) {
         d3.select("svg")
           .append("g")
-          .attr("transform", "translate(600,300)")
+          .attr("transform", "translate(500,300)")
           .selectAll("text")
           .data(words)
           .enter().append("text")
