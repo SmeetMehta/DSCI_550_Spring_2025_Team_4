@@ -108,7 +108,7 @@
   <div class="image-grid" id="least-similar"></div>
 
   <script>
-    d3.json("similarity_data.json").then(function(data) {
+    d3.json("../data/similarity_data.json").then(function(data) {
       const similarities = data.map(d => d.similarity);
 
       const margin = {top: 30, right: 30, bottom: 40, left: 40};
