@@ -1,5 +1,7 @@
 # DSCI_550_Spring_2025_Team_4
 
+Github Pages Link - https://smeetmehta.github.io/DSCI_550_Spring_2025_Team_4/LandingPage.html 
+
 Team Members: Ambalika Jaiswal, Angel Su, Marangelis Uben, Neil Bai, Smeet Mehta, Yihan Xia
 
 # The Bubble Map Chart: 
