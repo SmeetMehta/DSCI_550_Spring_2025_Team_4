@@ -183,8 +183,7 @@
         .attr("x", width / 2)
         .attr("y", 0 - margin.top / 2)
         .attr("text-anchor", "middle")
-        .style("font-size", "16px")
-        .text("Similarity Distribution");
+        .style("font-size", "16px");
 
       // Get the top 3 and last 3 of similarity
       const highest = data.sort((a, b) => b.similarity - a.similarity).slice(0, 3);
