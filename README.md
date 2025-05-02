@@ -1,6 +1,6 @@
 # DSCI_550_Spring_2025_Team_4
 
-By- Ambalika Jaiswal, Angel Su, Marangelis Uben, Neil Bai, Smeet Mehta, Yihan Xia
+Team Members: Ambalika Jaiswal, Angel Su, Marangelis Uben, Neil Bai, Smeet Mehta, Yihan Xia
 
 # The Bubble Map Chart: 
 This visualization presents a map of the United States with interactive bubbles placed over cities, each representing the number of reported ghost sightings in that location. The size and color of each bubble are dynamically adjusted based on the count of sightings, providing an intuitive understanding of the distribution of paranormal activity across the country. Larger bubbles indicate higher frequencies of sightings, while the color gradient corresponds to the magnitude of the sightings as per the accompanying legend.
